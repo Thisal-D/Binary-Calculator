@@ -1,4 +1,3 @@
 ## Binary Addition & Subtraction Calculator
 
-
-![image](https://github.com/Thisal-D/Thisal-D.github.io/assets/93121062/57333ef8-5de1-4270-a6fb-f1dd070eb063)
+![Screenshot 2024-02-05 162231](https://github.com/Thisal-D/Binary-Calculator/assets/93121062/c7d993ea-2114-4091-bc5b-b4e99e6d14ad)
