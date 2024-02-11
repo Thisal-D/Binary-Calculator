@@ -16,6 +16,7 @@ const OutputFieldSet1Legend = document.getElementById("output-fieldset-1-legend"
 const OutputFieldSet2Legend = document.getElementById("output-fieldset-2-legend");
 const OutputFieldSet3Legend = document.getElementById("output-fieldset-3-legend");
 
+const outputDiv = document.getElementById("output-div");
 
 let bitCount  = BitsCountSelector.value;
 bitCount = parseInt(bitCount.substring(0,bitCount.length-5));
@@ -87,6 +88,9 @@ function check_first_second_num(){
 }
 
 function resetOutput(){
+    outputDiv.style["border"] = "none";
+    outputDiv.style["background-color"] = "#ffffff";
+
     OutputFieldSet1Legend.textContent = ""
     OutputFieldSet2Legend.textContent = ""
     OutputFieldSet3Legend.textContent = ""
@@ -101,9 +105,12 @@ function resetOutput(){
 function createOutput(){
     outputValues = []
 
-    OutputFieldSet1.style["border"] ="2px solid white";
-    OutputFieldSet2.style["border"] ="2px solid white";
-    OutputFieldSet3.style["border"] ="3px solid white";
+    OutputFieldSet1.style["border"] ="1px solid rgba(210,210,210,0.2);";
+    OutputFieldSet2.style["border"] ="1px solid rgba(210,210,210,0.2);";
+    OutputFieldSet3.style["border"] ="1px solid rgba(210,210,210,0.2);";
+    outputDiv.style["border"] = "1px solid rgba(99,99,99,0.1)"
+    outputDiv.style["background-color"] = "rgba(210,210,210,0.2)"
+
     OutputFieldSet1Legend.textContent = firstNum;
     OutputFieldSet2Legend.textContent = secondNum;
 
@@ -120,15 +127,15 @@ function get_output_table_html(num){
     let innerHtml = `
                 <tr>
                     <td></td>
-                    <td>${firstNum}</td>
-                    <td>:</td>
-                    <td class="output">${outputValues[0]}</td>
+                    <td class="output-title">${firstNum}</td>
+                    <td><label class="dash">:</td>
+                    <td class="output"><label class="output-val">${outputValues[0]}</td>
                 </tr>
                 <tr>
                     <td> &nbsp &nbsp + &nbsp</td>
-                    <td>${secondNum}</td>
-                    <td>:</td>
-                    <td class="output">${outputValues[1]}</td>
+                    <td class="output-title">${secondNum}</td>
+                    <td class="dash">:</td>
+                    <td class="output"><label class="output-val">${outputValues[1]}</td>
                 </tr>`
     if (total>-1){
         outputVal = add_spaces_by(fix_len_by(decimal_to_binary(total),bitCount,"0"),4);
@@ -150,9 +157,9 @@ function get_output_table_html(num){
                 </tr
                 <tr>
                     <td></td>
-                    <td>${total}</td>
-                    <td>:</td>
-                    <td class="output">${outputVal}</td>
+                    <td class="output-title">${total}</td>
+                    <td class="dash">:</td>
+                    <td class="output"><label class="output-val">${outputVal}</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -174,14 +181,14 @@ function get_table_html(num){
 
     let innerHtml = `
                 <tr>
-                    <td>Decimal</td>
-                    <td>:</td>
-                    <td class="output">${num}</td>
+                    <td class="output-title">Decimal</td>
+                    <td class="dash">:</td>
+                    <td class="output"><label class="output-val">${num}</td>
                 </tr>
                 <tr>
-                    <td>Binary</td>
-                    <td>:</td>
-                    <td class="output">${add_spaces_by(binary,4)}</td>
+                    <td class="output-title">Binary</td>
+                    <td class="dash">:</td>
+                    <td class="output"><label class="output-val">${add_spaces_by(binary,4)}</td>
                 </tr>`
 
     if (num>-1){      
@@ -194,9 +201,9 @@ function get_table_html(num){
         outputValues.push(add_spaces_by(fixedBinary,4));
     }
     innerHtml+= `<tr>
-                    <td>Binary(${bitCount}-Bits)</td>
-                    <td>:</td>
-                    <td class="output">${add_spaces_by(fixedBinary,4)}</td>
+                    <td class="output-title">Binary(${bitCount}-Bits)</td>
+                    <td class="dash">:</td>
+                    <td class="output"><label class="output-val">${add_spaces_by(fixedBinary,4)}</td>
                 </tr>
                 `;
     if (num>-1){      
@@ -210,14 +217,14 @@ function get_table_html(num){
         outputValues.push(add_spaces_by(twosComplement,4));
         innerHtml += `
                     <tr>
-                        <td>1's Complement</td>
-                        <td>:</td>
-                        <td class="output">${add_spaces_by(onesComplement,4)}</td>
+                        <td class="output-title">1's Complement</td>
+                        <td class="dash">:</td>
+                        <td class="output"><label class="output-val">${add_spaces_by(onesComplement,4)}</td>
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
-                        <td class="output">+ 1</td>
+                        <td class="output"><label class="output-val">+ 1</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -225,9 +232,9 @@ function get_table_html(num){
                         <td class="output"><hr></td>
                     </tr>
                     <tr>
-                        <td>2's Complement</td>
-                        <td>:</td>
-                        <td class="output">${add_spaces_by(twosComplement,4)}</td>
+                        <td class="output-title">2's Complement</td>
+                        <td class="dash">:</td>
+                        <td class="output"><label class="output-val">${add_spaces_by(twosComplement,4)}</td>
                     </tr>
                     <tr>
                         <td></td>

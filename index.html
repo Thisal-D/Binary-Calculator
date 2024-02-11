@@ -15,64 +15,64 @@
         <form>
             <table>
                 <tr>
-                    <td>
+                    <td class="table-d-1">
                         <label class="input-title">Bits Count</label>
                     </td>
-                    <td>
-                        <label>:</label>
+                    <td class="table-d-2">
+                        <label class="dash">:</label>
                     </td>
-                    <td>
-                        <select id="bits_count" onchange="set_bit_count()">
-                            <option>4-Bits</option>
-                            <option>8-Bits</option>
-                            <option>12-Bits</option>
-                            <option>16-Bits</option>
-                            <option>24-Bits</option>
-                            <option>32-Bits</option>
+                    <td class="table-d-3">
+                        <select id="bits_count" onchange="set_bit_count()" class="user-input">
+                            <option class="options">4-Bits</option>
+                            <option class="options">8-Bits</option>
+                            <option class="options">12-Bits</option>
+                            <option class="options">16-Bits</option>
+                            <option class="options">24-Bits</option>
+                            <option class="options">32-Bits</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label class="input-title">First Number</label>
+                    <td class="table-d-1">
+                        <label class="input-title" >First Number</label>
                     </td>
-                    <td>
-                        <label>:</label>
+                    <td class="table-d-2">
+                        <label class="dash">:</label>
                     </td>
-                    <td>
-                        <input type="number" id="first_num" name="first_num" onchange="check_first_second_num()" onkeyup="check_first_second_num()">
+                    <td class="table-d-3">
+                        <input type="number" id="first_num" name="first_num" onchange="check_first_second_num()" onkeyup="check_first_second_num()"  class="user-input">
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="table-d-1">
                         <label class="input-title">Operator</label>
                     </td>
-                    <td>
-                        <label>:</label>
+                    <td class="table-d-2">
+                        <label class="dash">:</label>
                     </td>
-                    <td>
-                        <select id="operator_selector" onchange="set_operator()">
-                            <option>+</option>
-                            <option>-</option>
+                    <td class="table-d-3">
+                        <select id="operator_selector" onchange="set_operator()"  class="user-input">
+                                <option class="options">+</option>
+                                <option class="options">-</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="table-d-1">
                         <label class="input-title">Second Number</label>
                     </td>
-                    <td>
-                        <label>:</label>
+                    <td class="table-d-2">
+                        <label class="dash">:</label>
                     </td>
-                    <td>
-                        <input type="number" id="second_num" name="second_num" onchange="check_first_second_num()" onkeyup="check_first_second_num()">
+                    <td class="table-d-3">
+                        <input type="number" id="second_num" name="second_num" onchange="check_first_second_num()" onkeyup="check_first_second_num()"  class="user-input">
                     </td>
                 </tr>
             </table>
         </form>
     </fieldset>
 
-    <div id="output">
+    <div id="output-div">
         <fieldset class="output-fieldset" id="output-fieldset-1" >
             <legend id="output-fieldset-1-legend"  class="output-legend"></legend>
             <table id="first_number_output">
