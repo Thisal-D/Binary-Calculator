@@ -1,19 +1,19 @@
 @media screen and (min-width: 1081px) {
     h1 {
-      font-size: 50px;
+      font-size: 40px;
     }
     .input-title, select, .dash, option, .user-input, #operator_selector, #bits_count,.output-title{
-        font-size: 30px;
+        font-size: 20px;
     }
     #input-legend, .output-legend{
-        font-size: 35px;
+        font-size: 20px;
     }
     .output{
-        font-size: 25px;
+        font-size: 20px;
     }
   }
   
-  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  /* If the screen size is 1080px wide or less, set the font-size of <div> to 30px */
   @media screen and (max-width: 1081px) {
     h1 {
       font-size: 80px;
