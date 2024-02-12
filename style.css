@@ -2,9 +2,11 @@
 h1 {
     font-size: 28px;
 }
+
 .input-title, select, .dash, option, .user-input, #operator_selector, #bits_count,.output-title{
     font-size: 18px;
 }
+
 #input-legend, .output-legend{
     font-size: 20px;
 }
@@ -76,7 +78,6 @@ option{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
 .output{
     text-align: right;
 }
@@ -85,9 +86,7 @@ option{
     font-weight: bold;
 }
 
-
 #output-div{
     margin-top: 20px;
     border-radius: 10px;
-  
 }
